@@ -46,7 +46,7 @@ form input {
 }
 
 .todo-button {
-  transition: 0.5s;
+  transition: all 0.5s ease;
   background-color: #ff7561;
   color: white;
   box-shadow: 3px 5px 8px rgb(207, 207, 207);
@@ -87,6 +87,7 @@ form input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 .todo li {
@@ -97,7 +98,7 @@ form input {
 }
 
 .complete-btn {
-  transition: 0.5s;
+  transition: all 0.5s ease;
   padding: 10px;
   border: none;
   border-radius: 25px;
@@ -111,7 +112,7 @@ form input {
 }
 
 .trash-btn {
-  transition: 0.5s;
+  transition: all 0.5s ease;
   padding: 10px;
   border: none;
   border-radius: 25px;
@@ -131,4 +132,8 @@ form input {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+.drop {
+  transform: translateY(15px) translateX(35px);
+  opacity: 0;
 }

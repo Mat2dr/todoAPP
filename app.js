@@ -42,7 +42,11 @@ function deleteCheck(e) {
     //Trash
     if(item.classList[0]=== 'trash-btn') {
         const todo =item.parentElement; //Select l'élément parent
-        todo.remove(); 
+        //Animation
+        todo.classList.add("drop");
+        todo.addEventListener('transitionend', function(){
+            todo.remove(); 
+        });
     }
     //Checked
     if(item.classList[0]=== 'complete-btn') {
