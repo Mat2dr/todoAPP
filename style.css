@@ -33,6 +33,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0px;
 }
 
 form input {
@@ -41,12 +42,13 @@ form input {
   border-radius: 40px;
   font-size: 15px;
   color: grey;
+  flex: 1;
 }
 
 .todo-button {
+  transition: 0.5s;
   background-color: #ff7561;
   color: white;
-  margin-left: 10px;
   box-shadow: 3px 5px 8px rgb(207, 207, 207);
   width: 50px;
   height: 50px;
@@ -54,9 +56,69 @@ form input {
   border: none;
   border-radius: 40px;
   font-size: 15px;
+  margin-left: 15px;
 }
 
 .todo-button:hover {
   background-color: #f7492e;
-  transition: 1s;
+}
+.todo_title h1 {
+  padding: 15px 0px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #3b3031;
+}
+.todo-container {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+  width: 100%;
+}
+.todo {
+  margin: 15px 0px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+  color: #3b3031;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li {
+  flex: 1;
+  color: #3b3031;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.complete-btn {
+  transition: 0.5s;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #b1d199;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.complete-btn:hover {
+  background-color: #66b629;
+}
+
+.trash-btn {
+  transition: 0.5s;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #faaaa3;
+  color: white;
+  cursor: pointer;
+}
+.trash-btn:hover {
+  background-color: #ff230f;
 }
