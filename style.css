@@ -42,21 +42,3 @@ form input {
   font-size: 15px;
   color: grey;
 }
-
-.todo-button {
-  background-color: #ff7561;
-  color: white;
-  margin-left: 10px;
-  box-shadow: 3px 5px 8px rgb(207, 207, 207);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border: none;
-  border-radius: 40px;
-  font-size: 15px;
-}
-
-.todo-button:hover {
-  background-color: #f7492e;
-  transition: 1s;
-}
