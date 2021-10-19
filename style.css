@@ -42,6 +42,7 @@ form input {
   border-radius: 40px;
   font-size: 15px;
   color: grey;
+  font-family: "Poppins";
   flex: 1;
 }
 
@@ -136,4 +137,38 @@ form input {
 .drop {
   transform: translateY(15px) translateX(35px);
   opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+select {
+  color: #3b3031;
+  font-weight: 600;
+  font-family: "Poppins";
+  width: 150px;
+  cursor: pointer;
+  padding: 17px;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #afd4fe;
+  color: white;
+  top: 0;
+  right: 0;
+  width: 30px;
+  line-height: 50px;
+  pointer-events: none;
 }
