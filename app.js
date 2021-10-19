@@ -31,8 +31,6 @@ function addTodo(event) {
     todoDiv.appendChild(trashButton);
     // mettre dans ul
     todoList.appendChild(todoDiv);
-
-
-
-
+    //Effacer input text
+    todoInput.value = "";
 }
