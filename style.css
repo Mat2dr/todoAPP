@@ -122,3 +122,8 @@ form input {
 .trash-btn:hover {
   background-color: #ff230f;
 }
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
