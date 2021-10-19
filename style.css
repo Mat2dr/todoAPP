@@ -11,12 +11,20 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   padding: 25px;
+  max-width: 800px;
+  margin: auto;
 }
 
 header {
   padding: 15px 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 60px;
+  border-radius: 30px;
 }
 
 header h4 {
@@ -58,6 +66,7 @@ form input {
   border-radius: 40px;
   font-size: 15px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .todo-button:hover {

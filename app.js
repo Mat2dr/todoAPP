@@ -1,4 +1,6 @@
 // Selectors
+const messageHello = document.querySelector('.message');
+
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
@@ -6,6 +8,7 @@ const filterOption = document.querySelector('.filter-todo');
 
 
 // Event listeners
+document.addEventListener('DOMContentLoaded', getName);
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
@@ -137,4 +140,12 @@ function removeLocalTodos(todo){
     const todoIndex = todo.children[0].innerText;
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function getName() {
+    let name;
+    let hello;
+
+    name = prompt("Nom:");
+    messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
 }
