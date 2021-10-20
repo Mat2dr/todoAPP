@@ -80,22 +80,30 @@ function deleteCheck(e) {
 
 function getName() {
     let name = "";
+    let nameStorage = localStorage.getItem('name');
+    //OUVERTURE MODALE
 
-    modalName.classList.add('active');
-    overlay.classList.add('active');
+    if (nameStorage === null) {
+        //Ouvrir modal
+        modalName.classList.add('active');
+        overlay.classList.add('active');
+        filterOption.classList.add('opacity');
 
-    nameButton.addEventListener('click', function(){
-        modalName.classList.remove('active'); 
-        overlay.classList.remove('active'); 
-        name = nameInput.value;
-        console.log(name);
-
-        if (name === null) {
-            name = "";
-        } else {
+        nameButton.addEventListener('click', function(){
+            //Fermer modal
+            modalName.classList.remove('active'); 
+            overlay.classList.remove('active'); 
+            filterOption.classList.remove('opacity'); 
+                
+            name = nameInput.value;
+            localStorage.setItem('name', nameInput.value);
             messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
-        }
-    });
+        });
+    } else {
+        let nameStorage = localStorage.getItem('name');
+        messageHello.innerHTML = '<h4>Hey ' + nameStorage + '!</h4>';
+    }
+    
 }
 
 function getNbrTasks() {

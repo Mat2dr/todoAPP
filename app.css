@@ -149,6 +149,7 @@ form input {
 }
 
 select {
+  opacity: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -170,20 +171,11 @@ select {
   cursor: pointer;
   padding: 17px;
 }
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  background-color: #afd4fe;
-  color: white;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 30px;
-  line-height: 50px;
-  pointer-events: none;
-}
 
 .modal-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 86px;
   position: fixed;
   top: 50%;
@@ -222,7 +214,11 @@ select {
 .active {
   transform: translate(-50%, -50%) scale(1);
 }
-
+.entrer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 #overlay {
   position: fixed;
   opacity: 0;
@@ -231,11 +227,15 @@ select {
   right: 0;
   bottom: 0;
   padding: 1000vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   pointer-events: none;
 }
 
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.opacity {
+  opacity: 0;
 }
