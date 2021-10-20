@@ -77,7 +77,7 @@ function deleteCheck(e) {
 function getName() {
     let name;
 
-    name = prompt("Nom:");
+    name = prompt("Votre prénom:");
     if (name === null) {
         name = "";
     } else {
