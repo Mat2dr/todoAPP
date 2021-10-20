@@ -1,4 +1,8 @@
 // Selectors
+const nameInput = document.querySelector('.name-input');
+const modalName = document.querySelector('.modal-bg');
+const nameButton = document.querySelector('.name-button');
+const overlay = document.getElementById('overlay');
 const messageHello = document.querySelector('.message');
 const messageNbrTasks = document.querySelector('.nbr-tasks');
 let nbrTasks = 0;
@@ -75,14 +79,23 @@ function deleteCheck(e) {
 }
 
 function getName() {
-    let name;
+    let name = "";
 
-    name = prompt("Votre prénom:");
-    if (name === null) {
-        name = "";
-    } else {
-        messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
-    }
+    modalName.classList.add('active');
+    overlay.classList.add('active');
+
+    nameButton.addEventListener('click', function(){
+        modalName.classList.remove('active'); 
+        overlay.classList.remove('active'); 
+        name = nameInput.value;
+        console.log(name);
+
+        if (name === null) {
+            name = "";
+        } else {
+            messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
+        }
+    });
 }
 
 function getNbrTasks() {
