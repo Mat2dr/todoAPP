@@ -183,19 +183,43 @@ select {
   pointer-events: none;
 }
 
-.modal {
+.modal-bg {
+  padding: 86px;
   position: fixed;
-  padding: 25px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 0.2s ease;
-  border: 1px solid black;
   border-radius: 25px;
   z-index: 10;
-  background-color: white;
+  background-color: #f6fafb;
 }
-.modal.active {
+.modal-bg input {
+  padding: 17px;
+  border: none;
+  border-radius: 40px;
+  font-size: 15px;
+  color: grey;
+  font-family: "Poppins";
+  flex: 1;
+}
+.modal-bg button {
+  transition: all 0.5s ease;
+  background-color: #ff7561;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  border-radius: 40px;
+  font-size: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.modal-bg button:hover {
+  background-color: #f7492e;
+}
+.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -206,6 +230,7 @@ select {
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 1000vh;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
