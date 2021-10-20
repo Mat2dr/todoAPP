@@ -120,6 +120,7 @@ header {
   background-color: #e4e4e4;
   padding: 40px 50px 40px 50px;
   width: 100%;
+  margin-top: 40px;
 }
 
 #ContentFooter {
@@ -134,6 +135,7 @@ header {
 #PageFooter h3 {
   font-size: 18px;
   font-weight: 700;
+  opacity: 0.9;
 }
 
 #PageFooter a {
@@ -160,6 +162,7 @@ header {
 #PageFooter a:link {
   text-decoration: none;
   color: black;
+  opacity: 0.7;
 }
 
 #PageFooter a:visited {
