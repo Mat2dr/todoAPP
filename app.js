@@ -1,5 +1,7 @@
 // Selectors
 const messageHello = document.querySelector('.message');
+const messageNbrTasks = document.querySelector('.nbr-tasks');
+let nbrTasks = 0;
 
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
@@ -10,6 +12,7 @@ const filterOption = document.querySelector('.filter-todo');
 // Event listeners
 document.addEventListener('DOMContentLoaded', getName);
 document.addEventListener('DOMContentLoaded', getTodos);
+document.addEventListener('DOMContentLoaded', getNbrTasks);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
@@ -29,6 +32,9 @@ function addTodo(event) {
     todoDiv.appendChild(newTodo);
     //Local storage
     saveLocalTodos(todoInput.value);
+    //number of tasks
+    nbrTasks++;
+    getNbrTasks();
     //check button
     const completedButton = document.createElement ('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
@@ -54,6 +60,9 @@ function deleteCheck(e) {
         //Animation
         todo.classList.add("drop");
         removeLocalTodos(todo);
+        //number of tasks
+        nbrTasks--;
+        getNbrTasks();
         todo.addEventListener('transitionend', function(){
             todo.remove(); 
         });
@@ -62,6 +71,27 @@ function deleteCheck(e) {
     if(item.classList[0]=== 'complete-btn') {
         const todo =item.parentElement; //Select l'élément parent
         todo.classList.toggle('completed'); 
+    }
+}
+
+function getName() {
+    let name;
+
+    name = prompt("Nom:");
+    if (name === null) {
+        name = "";
+    } else {
+        messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
+    }
+}
+
+function getNbrTasks() {
+    if (nbrTasks === 0) {
+        messageNbrTasks.innerHTML = "<h1>Vous n'avez pas de tâches en cours</h1>";
+    } else if( nbrTasks === 1){
+        messageNbrTasks.innerHTML = '<h1>' + nbrTasks + ' tâche en cours</h1>';
+    } else {
+        messageNbrTasks.innerHTML = '<h1>' + nbrTasks + ' tâches en cours</h1>';
     }
 }
 
@@ -116,6 +146,8 @@ function getTodos() {
         newTodo.innerText = todo;
         newTodo.classList.add('todo-item');
         todoDiv.appendChild(newTodo);
+        //number of tasks
+        nbrTasks++;
         //check button
         const completedButton = document.createElement ('button');
         completedButton.innerHTML = '<i class="fas fa-check"></i>';
@@ -140,16 +172,4 @@ function removeLocalTodos(todo){
     const todoIndex = todo.children[0].innerText;
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem("todos", JSON.stringify(todos));
-}
-
-function getName() {
-    let name;
-    let hello;
-
-    name = prompt("Nom:");
-    if (name = "") {
-        name = "";
-    } else {
-        messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
-    }
 }
