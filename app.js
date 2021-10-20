@@ -147,5 +147,9 @@ function getName() {
     let hello;
 
     name = prompt("Nom:");
-    messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
+    if (name = "") {
+        name = "";
+    } else {
+        messageHello.innerHTML = '<h4>Hey ' + name + '!</h4>';
+    }
 }
