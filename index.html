@@ -12,36 +12,46 @@
     <script src="https://kit.fontawesome.com/98d512f75e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 
-    <title>Todo APP</title>
+    <title>Todo | Organisation</title>
 </head>
 <body>
     <header>
-        <div class="header-message">
-            <div class="message"></div>
-            <div class="nbr-tasks"></div>
-        </div>
-        <div class="profile-img">
-            <img src="img/male_avatar.png" alt="Avatar homme">
+        <a href="index.html" class="logo">
+            <i class="fas fa-check"></i>
+            <h1>ToDoAPP</h1>
+        </a>
+        <div class="menu">
+                <a href="app.html">login</a>
         </div>
     </header>
-    <form>
-        <input type="text" class="todo-input" placeholder="Ajouter une tâche">
-        <button class="todo-button" type="submit"><i class="fas fa-plus"></i></button>
-        <div class="select">
-            <select name="todos" class="filter-todo">
-                <option value="all">Toutes</option>
-                <option value="completed">Terminée</option>
-                <option value="uncompleted">En cours</option>
-            </select>
+    <div class="hero">
+        <div class="hero__text">
+            <h2>Organiser  tes journées <br>& les tâches à faire avec</h2>
+            <h1>todoapp</h1>
         </div>
-    </form>
-    <div class="todo_title">
-        <h1>Tâches en cours</h1>
+        <div class="hero__img">
+            <img class="img" src="img/hero.png" alt="Hero image terminer les tâches">
+        </div>
     </div>
-    <div class="todo-container">
-        <ul class="todo-list"></ul>
+    <div class="tuto">
+        <h2>Quand tu as l'impression de ne plus savoir où donner de la tête,<br> fait une pause et utilise Todo.</h2>
+        <a href="app.html">Commencer</a>
     </div>
-
-    <script src="./app.js"></script>
+    <footer>
+        <div id="PageFooter">
+          <div id="ContentFooter">
+            <div class="FooterBlock1">
+              <h3>A propos</h3>
+              <a href="">Crédits</a>
+            </div>
+      
+            <div class="FooterBlock2">
+              <h3>Assistance</h3>
+              <a href="https://www.linkedin.com/in/mathias-dragovic/">Nous contacter</a>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
 </body>
 </html>

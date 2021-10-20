@@ -6,178 +6,191 @@
 }
 
 body {
-  background-color: #f6fafb;
+  background-color: #ffffff;
   color: #3b3031;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  padding: 25px;
-  max-width: 800px;
-  margin: auto;
 }
 
 header {
-  padding: 15px 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-}
-header img {
-  width: 60px;
-  border-radius: 30px;
-}
-
-header h4 {
-  font-size: 27px;
-  font-weight: 600;
-}
-header h1 {
-  font-size: 15px;
-  font-weight: 400;
-  color: #ff7561;
+  justify-content: space-between;
+  padding: 25px 0px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-form {
+.logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 0px;
+  padding-left: 15px;
+  text-decoration: none;
+}
+.logo h1 {
+  color: #3b3031;
+  font-size: 28px;
 }
 
-form input {
-  padding: 17px;
-  border: none;
-  border-radius: 40px;
+.logo i {
   font-size: 15px;
-  color: grey;
-  font-family: "Poppins";
-  flex: 1;
-}
-
-.todo-button {
-  transition: all 0.5s ease;
-  background-color: #ff7561;
+  background-color: #d1e8c9;
+  border-radius: 25px;
+  padding: 8px;
   color: white;
-  box-shadow: 3px 5px 8px rgb(207, 207, 207);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border: none;
-  border-radius: 40px;
-  font-size: 15px;
-  margin-left: 15px;
-  cursor: pointer;
 }
 
-.todo-button:hover {
-  background-color: #f7492e;
-}
-.todo_title h1 {
-  padding: 15px 0px;
-  font-size: 24px;
-  font-weight: 600;
+.menu a {
+  transition: 0.5s;
   color: #3b3031;
-}
-.todo-container {
-  display: flex;
-  align-items: center;
-}
-
-.todo-list {
-  list-style: none;
-  width: 100%;
-}
-.todo {
-  margin: 15px 0px;
-  padding: 15px;
-  border-radius: 15px;
-  background-color: white;
-  color: #3b3031;
-  font-size: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.5s ease;
-}
-
-.todo li {
-  flex: 1;
-  color: #3b3031;
-  font-size: 17px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #3b3031;
+  border-radius: 25px;
   font-weight: 500;
-}
-
-.complete-btn {
-  transition: all 0.5s ease;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
-  background-color: #b1d199;
-  color: white;
-  cursor: pointer;
   margin-right: 15px;
-}
-.complete-btn:hover {
-  background-color: #66b629;
-}
-
-.trash-btn {
-  transition: all 0.5s ease;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
-  background-color: #faaaa3;
-  color: white;
-  cursor: pointer;
-}
-.trash-btn:hover {
-  background-color: #ff230f;
-}
-
-.fa-trash,
-.fa-check {
-  pointer-events: none;
-}
-
-.completed {
-  text-decoration: line-through;
   opacity: 0.5;
 }
-.drop {
-  transform: translateY(15px) translateX(35px);
-  opacity: 0;
+.menu a:hover {
+  opacity: 1;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-}
-.select {
-  margin: 10px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
+.hero {
+  border-top: 2px solid #e4e4e4;
+  padding: 25px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
-select {
-  color: #3b3031;
-  font-weight: 600;
-  font-family: "Poppins";
-  width: 150px;
-  cursor: pointer;
-  padding: 17px;
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  background-color: #afd4fe;
+.hero__text h2 {
+  font-size: 30px;
+}
+.hero__text h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #d1e8c9;
+  text-decoration: underline;
+}
+
+.hero__img {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__img img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.tuto {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tuto h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.tuto a {
+  margin: 30px;
   color: white;
-  top: 0;
-  right: 0;
-  width: 30px;
-  line-height: 50px;
-  pointer-events: none;
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: #63b4ff;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  box-shadow: 3px 5px 8px rgb(207 207 207);
+}
+
+/* Parametre  Footer*/
+
+#PageFooter {
+  background-color: #e4e4e4;
+  padding: 40px 50px 40px 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+#ContentFooter {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 1440px;
+  margin: auto;
+}
+
+#PageFooter h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#PageFooter a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0px 5px 0px;
+}
+
+.FooterBlock1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterBlock2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterBlock3 {
+  display: flex;
+  flex-direction: column;
+}
+
+#PageFooter a:link {
+  text-decoration: none;
+  color: black;
+}
+
+#PageFooter a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#PageFooter a:focus {
+}
+
+#PageFooter a:hover {
+  text-decoration: underline;
+}
+
+#PageFooter a:active {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1100px) {
+  .hero {
+    padding: 70px 15px 0px 15px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hero__text {
+    align-items: flex-start;
+  }
+  .tuto {
+    padding: 50px 0px;
+  }
 }
