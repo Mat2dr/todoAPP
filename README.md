@@ -11,6 +11,6 @@ J'ai donc réalisé le site et l'application en HTML / CSS & Javascript.
 
 ## Liens:
 
-:link: GitHub Pages du projet: https://mat2dr.github.io/DragovicMathias_P3_30072021/ :link:
+:link: GitHub Pages du projet: https://mat2dr.github.io/todoAPP/ :link:
 
  
