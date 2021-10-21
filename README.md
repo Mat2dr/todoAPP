@@ -7,7 +7,7 @@ Oublier de sortir les poubelles? Impossible !<br />
 A partir d'un design inspirer par un designer UI sur Dribble.<br />
 Crédit: :link: https://dribbble.com/shots/16473464-Task-Management-App
 
-J'ai donc realisé le site et l'application en HTML / CSS & Javascript.
+J'ai donc réalisé le site et l'application en HTML / CSS & Javascript.
 
 ## Liens:
 
